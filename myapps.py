@@ -154,6 +154,8 @@ def add_listing_form():
    if save:        
         args = [Listing_type, Listing_Status , Listing_Price , Listing_Beds , Listing_Baths , Listing_Acrelot,
                  Listing_Street , Listing_City , Listing_State , Listing_Zipcode , Lisitng_Housesize]
+        ## DEBUG
+        print(args)
         cur.callproc('insert_listing_proc',args)
         # Added new section -- Sahil
         proc_msg_query = "select * from status;"
